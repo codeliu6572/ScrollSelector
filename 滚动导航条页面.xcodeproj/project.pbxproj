@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682BEA671D0FF54B0029A89B /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682BEA661D0FF54B0029A89B /* SubViewController.m */; };
+		682BEA6A1D10057E0029A89B /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 682BEA691D10057E0029A89B /* Cache.m */; };
 		68D40EA31D0E4BE5002A8DD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40EA21D0E4BE5002A8DD0 /* main.m */; };
 		68D40EA61D0E4BE5002A8DD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40EA51D0E4BE5002A8DD0 /* AppDelegate.m */; };
 		68D40EA91D0E4BE5002A8DD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40EA81D0E4BE5002A8DD0 /* ViewController.m */; };
@@ -15,6 +17,8 @@
 		68D40EB11D0E4BE5002A8DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D40EAF1D0E4BE5002A8DD0 /* LaunchScreen.storyboard */; };
 		68D40EBC1D0E4BE5002A8DD0 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40EBB1D0E4BE5002A8DD0 /* _______Tests.m */; };
 		68D40EC71D0E4BE5002A8DD0 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40EC61D0E4BE5002A8DD0 /* _______UITests.m */; };
+		68D40ED61D0E500D002A8DD0 /* ScrollSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D40ED51D0E500D002A8DD0 /* ScrollSliderView.m */; };
+		68EAA28D1D115E4E0011906A /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 68EAA28C1D115E4E0011906A /* 1.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		682BEA651D0FF54B0029A89B /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
+		682BEA661D0FF54B0029A89B /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		682BEA681D10057E0029A89B /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
+		682BEA691D10057E0029A89B /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
 		68D40E9E1D0E4BE5002A8DD0 /* 滚动导航条页面.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "滚动导航条页面.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D40EA21D0E4BE5002A8DD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68D40EA41D0E4BE5002A8DD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,9 @@
 		68D40EC21D0E4BE5002A8DD0 /* 滚动导航条页面UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "滚动导航条页面UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D40EC61D0E4BE5002A8DD0 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
 		68D40EC81D0E4BE5002A8DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68D40ED41D0E500D002A8DD0 /* ScrollSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollSliderView.h; sourceTree = "<group>"; };
+		68D40ED51D0E500D002A8DD0 /* ScrollSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollSliderView.m; sourceTree = "<group>"; };
+		68EAA28C1D115E4E0011906A /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +116,13 @@
 				68D40EA51D0E4BE5002A8DD0 /* AppDelegate.m */,
 				68D40EA71D0E4BE5002A8DD0 /* ViewController.h */,
 				68D40EA81D0E4BE5002A8DD0 /* ViewController.m */,
+				68D40ED41D0E500D002A8DD0 /* ScrollSliderView.h */,
+				68D40ED51D0E500D002A8DD0 /* ScrollSliderView.m */,
+				682BEA681D10057E0029A89B /* Cache.h */,
+				682BEA691D10057E0029A89B /* Cache.m */,
+				68EAA28C1D115E4E0011906A /* 1.gif */,
+				682BEA651D0FF54B0029A89B /* SubViewController.h */,
+				682BEA661D0FF54B0029A89B /* SubViewController.m */,
 				68D40EAA1D0E4BE5002A8DD0 /* Main.storyboard */,
 				68D40EAD1D0E4BE5002A8DD0 /* Assets.xcassets */,
 				68D40EAF1D0E4BE5002A8DD0 /* LaunchScreen.storyboard */,
@@ -245,6 +263,7 @@
 			files = (
 				68D40EB11D0E4BE5002A8DD0 /* LaunchScreen.storyboard in Resources */,
 				68D40EAE1D0E4BE5002A8DD0 /* Assets.xcassets in Resources */,
+				68EAA28D1D115E4E0011906A /* 1.gif in Resources */,
 				68D40EAC1D0E4BE5002A8DD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682BEA6A1D10057E0029A89B /* Cache.m in Sources */,
+				682BEA671D0FF54B0029A89B /* SubViewController.m in Sources */,
 				68D40EA91D0E4BE5002A8DD0 /* ViewController.m in Sources */,
 				68D40EA61D0E4BE5002A8DD0 /* AppDelegate.m in Sources */,
+				68D40ED61D0E500D002A8DD0 /* ScrollSliderView.m in Sources */,
 				68D40EA31D0E4BE5002A8DD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +518,7 @@
 				68D40ECD1D0E4BE5002A8DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68D40ECE1D0E4BE5002A8DD0 /* Build configuration list for PBXNativeTarget "滚动导航条页面Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +527,7 @@
 				68D40ED01D0E4BE5002A8DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68D40ED11D0E4BE5002A8DD0 /* Build configuration list for PBXNativeTarget "滚动导航条页面UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +536,7 @@
 				68D40ED31D0E4BE5002A8DD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
