@@ -13,6 +13,9 @@
 @implementation ScrollSliderView
 {
     Cache *cache;
+    CGFloat widthContentSize;
+    long int clickCount;
+
 }
 /*
  *初始化底部ScrollView
@@ -40,7 +43,7 @@
         cache = [[Cache alloc]init];
         _dataArray = [NSArray arrayWithArray:titleArray];
         _fatherController = controller;
-
+        clickCount = 0;
         [self mainScrollView];
         [self addSubview:_mainScrollView];
         
@@ -69,7 +72,7 @@
     _sliderScrollView.showsVerticalScrollIndicator = NO;
     [self addSubview:_sliderScrollView];
     CGFloat spaceWidth = 6;
-    CGFloat widthContentSize = 0;
+    widthContentSize = 0;
     for (NSInteger i = 0; i < array.count; i++) {
         NSString *titleName = self.dataArray[i];
         NSInteger strWidth = [self sizeforWidthWithString:titleName];
@@ -110,6 +113,7 @@
 /*
  *点击滑块按钮响应事件
  */
+
 - (void)selectIndexTableViewAndCollectionView:(UIButton *)sender{
     //按钮点击 先把所有的按钮都不选中 滑动条View隐藏
     for (NSInteger i = 0; i < _dataArray.count; i++) {
@@ -126,32 +130,55 @@
     View.hidden = NO;
     
     UIButton *btnRight = [_sliderScrollView viewWithTag:sender.tag + 1];
-    UIButton *btnLeft = [_sliderScrollView viewWithTag:sender.tag - 1];
+    UIButton *btnLeft = [_sliderScrollView viewWithTag:sender.tag - 2];
     //分页 显示哪个控制器
     _mainScrollView.contentOffset = CGPointMake(index*VIEWWIDTH,0);
-    if ((sender.frame.origin.x + sender.frame.size.width) > VIEWWIDTH - 10){
-        if (sender.tag != (20000 + _dataArray.count - 1)) {
+    NSLog(@"%f",widthContentSize);
+    if (sender.tag > clickCount) {
+        if (self.sliderScrollView.contentOffset.x > VIEWWIDTH) {
+            if (sender.tag - 20000 != _dataArray.count - 1) {
+                [UIView animateWithDuration:0.3f animations:^{
+                    self.sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                }];
+            }
+           
+        }
+        else
+        {
             [UIView animateWithDuration:0.3f animations:^{
-                self.sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                self.sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
             }];
         }
-        
         
     }
     else
     {
-        [UIView animateWithDuration:0.3f animations:^{
-            self.sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
-        }];
+        if (self.sliderScrollView.contentOffset.x > VIEWWIDTH) {
+            if (sender.tag - 20000 != _dataArray.count - 1) {
+                [UIView animateWithDuration:0.3f animations:^{
+                    self.sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                }];
+            }
+          
+        }
+        else
+        {
+            [UIView animateWithDuration:0.3f animations:^{
+                self.sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
+            }];
+        }
+
     }
+    
     
     if (![cache hasCacheIndex:_selectIndex]) {
         [self addSubController];
         
     }
-    
-    
-    
+    NSLog(@"btn.tag%d---lastCount%d",sender.tag,clickCount);
+
+    clickCount = sender.tag;
+
 }
 /*
  *创建未创建的滑块对应控制器
@@ -193,27 +220,52 @@
     UIButton *btnLeft = [_sliderScrollView viewWithTag:index - 1 + 20000];
     //分页 显示哪个控制器
     _mainScrollView.contentOffset = CGPointMake(index * VIEWWIDTH,0);
-    if ((btnCenter.frame.origin.x + btnCenter.frame.size.width) > VIEWWIDTH - 10){
-        if (btnCenter.tag != (20000 + _dataArray.count - 1)) {
+    
+    if (btnCenter.tag > clickCount) {
+        if (self.sliderScrollView.contentOffset.x > VIEWWIDTH) {
+            if (btnCenter.tag - 20000 != _dataArray.count - 1) {
+                [UIView animateWithDuration:0.3f animations:^{
+                    self.sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                }];
+            }
+            
+        }
+        else
+        {
             [UIView animateWithDuration:0.3f animations:^{
-                _sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                self.sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
             }];
         }
-        
         
     }
     else
     {
-        [UIView animateWithDuration:0.3f animations:^{
-            _sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
-        }];
+        if (self.sliderScrollView.contentOffset.x > VIEWWIDTH) {
+            if (btnCenter.tag - 20000 != _dataArray.count - 1) {
+                [UIView animateWithDuration:0.3f animations:^{
+                    self.sliderScrollView.contentOffset = CGPointMake(btnRight.frame.origin.x + btnRight.frame.size.width - VIEWWIDTH, 0);
+                }];
+            }
+
+        }
+        else
+        {
+            [UIView animateWithDuration:0.3f animations:^{
+                self.sliderScrollView.contentOffset = CGPointMake(btnLeft.frame.origin.x, 0);
+            }];
+        }
+        
     }
+
     
+    NSLog(@"btn.tag%d---lastCount%d",btnCenter.tag,clickCount);
+
+    clickCount = btnCenter.tag;
+
     if (![cache hasCacheIndex:_selectIndex]) {
         [self addSubController];
         
     }
-    
 }
 /*
 // Only override drawRect: if you perform custom drawing.
