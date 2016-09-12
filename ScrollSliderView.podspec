@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name = 'ScrollSliderView'
 
-  s.homepage     = 'http://blog.csdn.net/codingfire/article/details/52470802'
+  s.homepage     = 'http://blog.csdn.net/codingfire'
   s.license      = 'MIT'
   s.version      = '1.0.1'
   s.summary      = 'A ScrollSliderView menu for iOS'
@@ -16,10 +16,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/codeliu6572/ScrollSelector.git', :tag => '1.0.1' }
 
   s.source_files  = 'ScrollSliderView/*.{h,m}'
- 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
   s.requires_arc = true
 
 
