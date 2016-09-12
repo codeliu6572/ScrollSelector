@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 
   s.name = 'ScrollSliderView'
 
-  s.homepage     = 'http://blog.csdn.net/codingfire'
+  s.homepage     = 'http://blog.csdn.net/codingfire/article/details/52470802'
   s.license      = 'MIT'
   s.version      = '1.0.1'
   s.summary      = 'A ScrollSliderView menu for iOS'
